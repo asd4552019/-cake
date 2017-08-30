@@ -1,0 +1,104 @@
+<!-- 设置个人中心页面 -->
+	<div id="main" class="main ucenter-main">
+		<!-- 设置登录栏 -->
+		<section class="user-message">
+			<!-- 设置登录框 -->
+			<div class="inner">
+				<!-- 设置头像图片 -->
+				<div class="img">
+					<img src="./static/imgs/avatar_new.png" alt="">
+				</div>
+
+				<!-- 设置登录按钮 -->
+				<div class="info">
+					<a href="#">
+						<button>登录</button>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- 设置订单查询栏 -->
+		<section class="order-message">
+			<div class="clear-fix">
+				<!-- 待付款按钮 -->
+				<a href="javascript:;">待付款</a>
+				<!-- 待发货按钮 -->
+				<a href="javascript:;">待发货</a>
+				<!-- 待收货按钮 -->
+				<a href="javascript:;">待收货</a>
+				<!-- 我的订单 -->
+				<a href="javascript:;" class="my-orders">我的订单</a>
+			</div>
+		</section>
+
+		<!-- 设置优惠券栏 -->
+		<section class="list">
+			<!-- 设置优惠卡券 -->
+			<h2>
+				<a href="javascript:;" class="nav-coupon">
+					<b>优惠卡券</b>
+				</a>
+			</h2>
+
+			<!-- 设置Leclub -->
+			<h2>
+				<a href="javascript:;" class="nav-leclub">
+					<b>Leclub</b>
+				</a>
+			</h2>
+		</section>
+		<hr>
+		<!-- 关于我们和关于发票 -->
+		<section class="list">
+			<!-- 关于我们 -->
+			<h2>
+				<a href="javascript:;">
+					<b>关于我们</b>
+				</a>
+			</h2>
+
+			<!-- 关于发票 -->
+			<h2>
+				<a href="javascript:;">
+					<b>关于发票</b>
+				</a>
+			</h2>
+		</section>
+		
+		<!-- 设置客服电话 -->
+		<p class="hotline">
+			<a href="tel:400-157-8578">
+				客服电话:400-157-8578
+			</a>
+		</p>
+	</div>
+	
+
+	<!-- 设置底部导航 -->
+	<div class="footer-nav latest">
+		<nav class="footer-menu">
+			<a class="nav-item nav-index" href="#/">
+				<i></i>
+				首页
+			</a>
+			<a class="nav-item" href="#/list">
+				<i></i>
+				蛋糕馆
+			</a>
+			<a class="nav-item" href="#/gift">
+				<i></i>
+				礼品馆
+			</a>
+			<a id="only" class="nav-item" href="#/shopcar">
+				<i></i>
+				购物车
+				<!-- 设置购物车数量标识 -->
+				<span class="shopping-num" ng-show="cart.length">{{allNum}}</span>
+			</a>
+			<a class="nav-item nav-user" href="#/user">
+				<i></i>
+				个人中心
+			</a>
+		</nav>
+	</div>

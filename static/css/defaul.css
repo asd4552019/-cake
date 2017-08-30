@@ -1,0 +1,1669 @@
+/*项目开始*/
+/* 设置网页外边div */
+.homepage{
+    width:100%;
+    padding-bottom:50px;
+    height: auto;
+    /* background: yellow; */
+}
+/* 设置头部开始*/
+.header{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 32px;
+    font-size: 15px;
+    color: #1f1f1f;
+    text-align: center;
+    border-bottom: 1px solid #d1c6af;
+    background: white;
+    background: rgba(255, 255, 255, .95);
+} 
+
+/* 设置居中的logo*/
+.header-title{
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background: url(../imgs/logo.png) no-repeat center center;
+    background-size: 94px 10px;
+    display: inline-block;
+    overflow: hidden;
+} 
+
+/* 配送地点 */
+.address{
+    position: absolute;
+    left: 15px;
+    top: 9px;
+    padding-left: 12px;
+    background:url(../imgs/ico-location-new.png) no-repeat left center;
+    background-size: 9px 13px;
+    font-size: 11px;
+    color: #a38d6b;
+    height: 15px;
+    line-height: 15px;
+}
+
+
+/* 设置轮播图 */
+.banner{
+    width:100%;
+    height:24.91453rem;
+    margin-top: 31px;
+    margin-bottom: 5px;
+}
+
+/* 设置图片大小 */
+.swiper-img{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.swiper-img img{
+    /* position: absolute; */
+    left: 50%;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+}
+
+/* 设置轮播小圆点位置 */
+#banner-pagination{
+    padding-right: 15px;
+    bottom: 5px;
+    text-align: right;
+}
+#banner-pagination .swiper-pagination-bullet{
+    width:6px;
+    height:6px;
+    margin:0 2px;
+    background:#fff;
+    opacity: 0.8;
+}
+#banner-pagination .swiper-pagination-bullet-active{
+    background:#a79774;
+}
+
+
+/*为您推荐列表*/
+.goods{
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+/* 分割区域 */
+.featured-goods{
+    margin-bottom: 9px;
+}
+
+/*商品区域开始 标题*/
+.title-group{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    background: white;
+    text-align: center;
+    color: #8c7d5c;
+    border-top: 1px solid #8c7d5c;
+}
+.recommon-goods h1{
+    font-size: 13px;
+    margin:0
+}
+.recommon-goods h2{
+    font-size: 10px;
+}
+
+/*详细商品表*/
+.goods .recommon-goods .row{
+    margin: 0 0 10px;
+}
+
+.goods .recommon-goods .goods-item:nth-child(odd){
+    padding-right: 8px;
+}
+
+.goods .recommon-goods .goods-item:nth-child(even){
+    padding-left: 8px;
+}
+
+.goods .recommon-goods .goods-item{
+    margin-bottom: 8px;
+}
+
+.goods .recommon-goods .img-wrap{
+    position: relative;
+  width: 100%;
+  height: 31vw;
+  display: block;
+  overflow: hidden;
+}
+.goods .recommon-goods .img-wrap>img{
+  position: absolute;
+  /* left: 50%; */
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+/* 商品名称及操作区 */
+.goods .recommon-goods .goods-info{
+  padding-top: 10px;
+  line-height: 15px;
+  position: relative;
+}
+.goods .recommon-goods .goods-name{
+    font-size: 12px;
+  padding: 0;
+}
+.goods .recommon-goods .goods-enname{
+    padding: 0;
+  font-size: 10px;
+  margin: 0;
+    color:#666;
+}
+
+/* 设置添加购物车的加号 */
+.goods .recommon-goods .goods-item:nth-child(odd) .add-goods{
+    right:4px;
+}
+.goods .recommon-goods .add-goods{
+    top: 32.5vw;
+}
+
+.goods .add-goods{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.goods .add-goods:before{
+      content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: url(../imgs/icons_new.png) no-repeat -25px -78px;
+    background-size: 50px 100px;
+    display: block;
+}
+
+.goods .recommon-goods .add-goods{
+      right: 11px;
+    top: 32.5vw;
+}
+
+
+/* 全部蛋糕栏 */
+.more-cake{
+      width: 100%;
+    height: 50px;
+}
+.more-cake > a{
+      width: 100%;
+    height: 100%;
+    padding-top: 13px;
+    line-height: 12px;
+    font-size: 10px;
+    text-align: center;
+    color: #8c7d5c;
+    background: #f9f9f9;
+    display: block;
+}
+
+/* 电脑版和触摸版切换板块 */
+.device-switch{
+      width: 200px;
+    margin: 24px auto 0;
+    display: flex;
+}
+.device-switch a{
+      position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding-top: 24px;
+    font-size: 10px;
+    color: #5c5c5c;
+    text-align: center;
+    display: block;
+}
+
+/* 设置图标 */
+.device-switch a:before{
+      content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -9px;
+    width: 18px;
+    height: 16px;
+    background: url(../imgs/ico-device.png) no-repeat;
+    background-size: 18px 32px;
+}
+.device-switch .computer:before{
+      background-position: left -16px;
+}
+
+
+/*部版权声明*/
+.footer_version{
+    width: 100%;
+    padding: 14px 0 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.footer_version h4{
+      width: 100%;
+    float: left;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+    color: #5c5c5c;
+}
+
+
+/* 返回顶部锚点 */
+.go-top{
+      position: fixed;
+    z-index: 1000;
+    right: 15px;
+    bottom: 75px;
+    width: 40px;
+    height: 40px;
+    background: url(../imgs/ico-top.png) no-repeat;
+    background-size: 40px 40px;
+    display: block;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+/* 设置底部导航 */
+.footer-nav{
+    position: fixed;
+    z-index: 100;
+    height: 54px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #d1c6af;
+}
+.footer-nav .footer-menu{
+    width: 100%;
+    display: flex;
+}
+
+/* 设置导航内容 */
+.footer-nav .nav-item{
+    width:20%;
+    padding: 10px 0 4px;
+    font-size: 12px;
+    color: #a38d6b;
+    line-height: 24px;
+    text-align: center;
+}
+.footer-nav .nav-item i{
+    text-align: center;
+    display:block;
+    width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 1.282051rem;
+  background-image: url(../imgs/ico-nav-new.png);
+  background-size: 32px 80px;
+}
+.footer-nav .nav-item:first-child i{
+    background-position: -16px top;
+}
+.footer-nav .nav-item:nth-child(2) i{
+    background-position: left -16px;
+}
+.footer-nav .nav-item:nth-child(3) i{
+    background-position: left -32px;
+}
+.footer-nav .nav-item:nth-child(4) i{
+    background-position: left -48px;
+}
+.footer-nav .nav-item:nth-child(5) i{
+    background-position: left -64px;
+}
+
+/* 列表页导航图标展示方式 */
+.footer-nav .nav-item.nav-index i{
+    background-position: 0 0;
+}
+.footer-nav .nav-item.nav-list i{
+    background-position: -16px -16px;
+}
+
+/* 礼品馆导航图标展示方式 */
+.footer-nav .nav-item.nav-list1 i{
+    background-position: left -16px;
+}
+
+.footer-nav .nav-item.nav-gift i{
+    background-position: -16px -32px;
+}
+
+/* 购物车导航图标展示方式 */
+.footer-nav .nav-item.nav-shopcar i{
+    background-position: -16px -48px;
+}
+
+
+/* 个人中心导航图标展示方式 */
+.footer-nav .nav-item.nav-user i{
+    background-position: -16px -64px;
+}
+
+
+
+
+/*----------------------------------------*/
+
+/* 设置礼品馆列表页 */
+/* 设置头部 */
+.header-list{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 43px;
+    font-size: 15px;
+    color: #1f1f1f;
+    text-align: center;
+    border-bottom: 1px solid #d1c6af;
+    background: white;
+    background: rgba(255, 255, 255, .95);
+}
+
+/* 设置礼品馆和蛋糕馆切换按钮 */
+.header-list .header-nav{
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.header-list .header-nav .nav-item{
+    height: 100%;
+    line-height: 42px;
+    font-size: 12px;
+    color: #a38d6b;
+}
+
+.header-list .header-nav .nav-item.active{
+    color: #a38d6b;
+    background: #f9f9f9;
+}
+.header-nav>.nav-item{
+      float: left;
+    padding: 0 8px;
+    width: 90px;
+    display: inline-block;
+}
+
+/* 设置选择城市按钮 */
+.header-list.latest .current-city{
+      margin-top: 2px;
+    padding-left: 12px;
+    background-image: url(../imgs/ico-location-new.png);
+    background-size: 9px 13px;
+    font-size: 11px;
+    color: #a38d6b;
+    height: 15px;
+    line-height: 15px;
+}
+
+.header-list .current-city{
+        position: absolute;
+    left: 15px;
+    top: 13px;
+    background: url(../imgs/ico-location.png) no-repeat left top;
+}
+
+/* 设置筛选按钮 */
+.header-list.latest .sieve-control{
+    position: absolute;
+    top: 10px;
+    padding-left: 15px;
+    height: 20px;
+    line-height: 20px;
+    right: 15px;
+    font-size: 12px;
+    color: #a38d6b;
+    white-space: nowrap;
+    background: url(../imgs/ico-sieve-new.png) no-repeat left center;
+    background-size: 11px 12px;
+}
+
+/*隐藏的搜索框*/
+.hide-box{
+    position:absolute;
+    width:75%;
+    height:100px;
+    background: rgba(255,255,255,0.8);
+    left:15%;
+    top:200%;
+    border-radius: 5px;
+    
+}
+
+.hide-box input{
+    width:85%;
+    height:40px;
+    border-radius: 20px;
+    text-indent: 1em;
+}
+.hide-box span{
+    position:absolute;
+    width:0.854701rem;
+    height:0.854701rem;
+    display:inline-block;
+    background: url(../imgs/search.png) no-repeat;
+    top:12px;
+    right:28px;
+}
+.hide-box hr{
+    margin-top: 10px;
+    background:red;
+}
+.hide-box button{
+    margin-top: 10px;
+}
+
+.u-flyer {
+    display: block;
+    width:80px;
+    position: fixed;
+    z-index: 9999;
+}
+
+
+
+
+/* 头部结束 */
+
+/* 设置页面内容 外包的大容器 */
+.category-main{
+    margin-top: 23px;
+    padding-bottom: 72px;
+    width: 100%;
+}
+
+/* 详细内容 */
+.goods-section{
+        padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.goods-item{
+    margin-bottom: 12px;
+}
+/* 设置商品图片*/
+.goods-item .goods-image-wrap{
+      padding-left: 0;
+    padding-right: 0;
+} 
+
+/* 设置商品名称 */
+.goods-info{
+      padding-top: 12px;
+    padding-right: 0;
+}
+.goods-item .goods-name{
+        margin: 0 0 3px;
+    font-size: 14px;
+    color: #333;
+}
+.goods-audio-tips{
+      padding-left: 15px;
+    background: url(../imgs/ico-audio-tips.png) no-repeat left top;
+    background-size: 11px 13px;
+    display: inline-block;
+}
+/* 设置名称下面的字母 */
+.goods-item .goods-enname{
+    margin: 0;
+    color: #666;
+    font-size: 11px;
+    display: inline-block;
+}
+
+/* 设置价格部分 */
+.goods-item .goods-price{
+        margin: 0;
+    color: #9b9b9b;
+    font-size: 12px;
+    line-height: 100%;
+}
+.goods-item .goods-price>.price{
+      font-size: 14px;
+    color: #333;
+}
+
+/* 设置新品小图标 */
+.ext-info{
+      line-height: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.promotion > span:first-child, .goods-mark{
+    padding: 2px 4px;
+    height: 14px;
+    font-size: 10px;
+    line-height: 11px;
+    color: white;
+    background: #ff4001;
+    border-radius: 1px;
+    display: inline-block;
+}
+#promotion{
+    padding:0;
+    margin:0;
+    position: relative;
+    font-size: 11px;
+    color: #ff4001;
+}
+
+/* 加入购物车按钮 */
+.add-shopcar{
+    font-size:12px;
+    padding:2px 5px;
+    background:orange;
+    border-radius:10px;
+    text-align: center; 
+}
+
+
+/* 设置没有更多产品咯 */
+.goods-section .the-last{
+    padding: 10px;
+    width: 150px;
+    color: #a1a1a1;
+    text-align: center;
+    background: url(../imgs/bg-last.png) no-repeat center center;
+    background-size: 150px 12px;
+    display: inline-block;
+}
+
+
+
+/* -------------------------------------- */
+
+
+
+/* 设置购物车页面 */
+/* 外面大容器 */
+.cart-container{
+  margin: 0;
+  padding-bottom: 70px;
+  /*display:none;*/
+}
+.main{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+/*设置购物车内的小车样式*/
+.goods .no-content{
+  position: relative;
+  height: 220px;
+  text-align: center;
+}
+.goods .no-content img{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 50%;
+    top: 60px;
+    margin-left: -37.5px;
+}
+/* 设置购物车内的文字 */
+.goods .no-content p{
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    font-size: 10px;
+    color: #939393;
+}
+
+/* 设置为您推荐 */
+.recommend-goods .division{
+    border-top: 1px solid #d1c6af;
+}
+.division{
+    height: 50px;
+    padding-top: 20px;
+    color: #8c7d5c;
+}
+.division h4{
+    font-size: 13px;
+    text-align: center;
+}
+   
+.division h3{
+    font-size: 10px;
+    text-align: center;
+}
+
+.recommonds{
+    margin-top: 20px;
+}
+
+.recommend-item:nth-child(odd){
+    padding-right: 8px;
+}
+
+.recommend-item{
+    margin-bottom: 10px;
+}
+
+/* 设置图片 */
+.recommend-item .item-img{
+    position: relative;
+    width: 100%;
+    height: 31vw;
+    display: block;
+    overflow: hidden;
+}
+.recommend-item .item-img img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    max-width: none;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+/* 设置商品名称及操作区 */
+.recommend-item .item-info{
+    padding-top: 10px;
+    line-height: 15px;
+    position: relative;
+}
+
+.recommend-item .item-info h1{
+    margin-top:0;
+    margin-bottom: 3px;
+    font-size: 12px;
+    color: #444;
+}
+
+.recommend-item .item-info h4{
+    font-size: 10px;
+    color: #444;   
+}
+
+/* 设置添加购物车的加号 */
+.recommend-item:nth-child(odd) .add-goods{
+    right: 4px;
+}
+.recommend-item .add-goods{  
+    position: absolute;
+    right: 11px;
+    top: 32.5vw;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.recommend-item .add-goods:before{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: url(../imgs/icons_new.png) no-repeat -25px -78px;
+    background-size: 50px 100px;
+    display: block;
+}
+
+
+
+
+
+/* -------------------------------------- */
+
+/* 设置个人中心页面 */
+.ucenter-main{
+    margin-top: 0;
+    padding-bottom: 100px;
+}
+#main{
+    position:static;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+.user-message{
+    position: relative;
+    height: 106px;
+    border-top: 0;
+}
+
+/* 设置登录框 */
+.main .user-message .inner{
+    position: absolute;
+    padding-top: 24px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+/* 设置头像图片 */
+.main .user-message .img{
+    position: absolute;
+    margin: 5px 0;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background: #f9f9f9;
+    border-radius: 50%;
+}
+.main .user-message .img > img{
+    width: 55px;
+    height: 55px;
+}
+
+/* 设置登录按钮 */
+.main .user-message .info{
+    display: inline-block;
+    height: 60px;
+    margin-left: 72px;
+    text-align: left;
+}
+.main .user-message button{
+    position: relative;
+    top: 18px;
+    font-size: 12px;
+    background: #a38d6b;
+    color: #fff;
+    width: 60px;
+    height: 24px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 0;
+}
+
+
+/* 设置订单查询栏 */
+.main .order-message{
+    position: relative;
+    border-top: 1px solid #d1c6af;
+    border-bottom: 1px solid #d1c6af;
+    margin-bottom: 10px;
+}
+
+/* 待付款 */
+.main .order-message div a{
+    position: relative;
+    float: left;
+    height: 72px;
+    width: 20%;
+    font-size: 12px;
+    color: #444;
+    text-align: center;
+    padding-top: 40px;
+} 
+/* 待付款中的小图标 */
+.main .order-message div a:before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 50%;
+    top: 20px;
+    margin-left: -8px;
+    background: url(../imgs/ucenter_icons.png) no-repeat;
+    background-size: 16px 128px;
+}
+.main .order-message div a:nth-of-type(1):before{
+    background-position: left top;
+}
+
+/* 待发货按钮 */
+.main .order-message div a:nth-of-type(2):before{
+    background-position: left -16px;
+}
+
+/* 待收货按钮 */
+.main .order-message div a:nth-of-type(3):before{
+    background-position: left -32px;
+}
+
+/* 我的订单 */
+.main .order-message div a.my-orders{
+    width: 40%;
+    background: #f9f9f9;
+}
+.main .order-message div a:nth-of-type(4):before{
+    background-position: left -48px;
+}
+
+/* 设置尖头 */
+.clear-fix:after{
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.main .order-message:after{
+    content: "";
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    transform: translate(-50%,-50%) rotate(45deg);
+    -webkit-transform: translate(-50%,-50%) rotate(45deg);
+    display: block;
+}
+
+/* 设置优惠券栏 */
+.main section h2{
+    position: relative;
+    font-size: 12px;
+    padding-left: 16px;
+    height: 45px;
+    line-height: 45px;
+}
+.main section h2 .nav-coupon,
+.main section h2 .nav-leclub{
+    padding-left: 24px;
+}
+.main section h2 a{
+    position: relative;
+    display: block;
+    color: #444;
+    width: 100%;
+    height: 100%;
+}
+/* 设置里面的字体样式 */
+.main section h2 b{
+    display: inline-block;
+    /* vertical-align: middle; */
+    font-weight: normal;
+}
+
+/* 设置字前面的小图标 */
+.main section h2 .nav-coupon:before, 
+.main section h2 .nav-leclub:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../imgs/ucenter_icons.png);
+    background-repeat: no-repeat;
+    background-size: 16px 128px;
+}
+.main section h2 .nav-coupon:before{
+    background-position: left -80px;
+}
+.main section h2 .nav-leclub:before{
+    background-position: left -96px;
+}
+
+/* 设置右边的小箭头 */
+.main section h2:after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 13px;
+    top: 50%;
+    right: 16px;
+    margin-top: -7px;
+    background: url(../imgs/arrow.png) no-repeat;
+    background-size: 8px 13px;
+}
+
+.main hr{
+    margin: 0;
+    border-top: 1px solid #d1c6af;
+}
+
+
+/* 设置客服电话 */
+.main .hotline{
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    margin: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #444;
+}
+.main .hotline > a{
+    position: relative;
+    padding-left: 18px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+/* 设置客服电话前面的小图标 */
+.main .hotline > a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(../imgs/ucenter_icons.png) no-repeat left -112px;
+    background-size: 16px 128px;
+    display: inline-block;
+}
+
+
+/*------------------------------------*/
+/* 设置详情页 */
+#header{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 43px;
+    font-size: 15px;
+    color: #1f1f1f;
+    text-align: center;
+    border-bottom: 1px solid #d1c6af;
+    background: rgba(255, 255, 255, .95);
+}
+#header .header-titl{
+    line-height: 43px;
+    font-size: 12px;
+    color: #8c7d5c;
+}
+
+/* 返回上一页的箭头 */
+#header .back{
+    position: absolute;
+    left: 0;
+    top: 3px;
+    padding: 9px 15px;
+    width: 40px;
+    height: 36px;
+    display: block;
+}
+#header .back:before{
+    content: "";
+    width: 9px;
+    height: 12px;
+    background: url(../imgs/ico-back.png) no-repeat left top;
+    background-size: 8px 12px;
+    display: inline-block;
+}
+/* 设置返回首页的按钮 */
+#header .home{
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    text-align: right;
+    width: 57px;
+    padding-right: 15px;
+    padding-top: 8px;
+    height: 26px;
+    font-size: 10px;
+    color: #8c7d5c;
+    display: block;
+}
+#header .home:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    background: url(../imgs/ico-nav-new.png) no-repeat left top;
+    background-size: 32px 80px;
+    display: block;
+}
+
+
+/* 设置页面主体 */
+.goods-detail{
+    margin-top: 43px;
+    padding-bottom: 60px;
+}
+.swiper-new{
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+.swiper-new > img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 280px;
+    width: auto;
+    max-width: none;
+    display: block;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.page-section{
+    position: relative;
+    padding-bottom: 10px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 设置几人量选择区 */
+#goods-info{
+    margin:0;
+    padding:0;
+    /*height:223px;*/
+}
+.goods-switch{
+    height: 60px;
+    display: flex;
+}
+
+/*2-4人食*/
+.goods-switch .switch-item{
+    position: relative;
+    color: #a6906c;
+    height: 60px;
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 10px;
+    padding: 14px 0;
+    background: #f6f6f6;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.goods-switch .switch-item > span{
+    font-size: 12px;
+}
+/*选中区域*/
+.goods-switch .switch-item.active{
+    background:#fff;
+}
+
+/* 设置商品介绍 */
+.goods-list .goods-item{
+    background: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+
+.goods-list .goods-item > .row{
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e1dbcc;
+}
+
+/*设置产品名字*/
+.goods-list .goods-item > .row > .col{
+    padding: 0;
+}
+.goods-list .goods-name{
+    margin: 0;
+    color: #444;
+    font-size: 15px;
+}
+
+.goods-name small{
+    color: #444;
+}
+
+/*设置产品价格*/
+.goods-list .goods-item > .row > .price{
+    color: #ff4001;
+}
+
+
+/*产品口味*/
+.goods-flavor{
+    position: relative;
+    height: 16px;
+    line-height: 16px;
+    color: #515151;
+    font-size: 11px;
+    display: inline-block;
+    white-space: nowrap;
+}
+.goods-specif{
+    position: relative;
+    padding-left: 24px;
+    height: 16px;
+    line-height: 16px;
+    color: #515151;
+    font-size: 11px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.goods-specif{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+/* 设置小图标 */
+.goods-specif:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 16px;
+    background: url(../imgs/ico-service.png) no-repeat;
+    background-size: 18px 75px;
+    display: inline-block;
+}
+.goods-specif:before{
+    top: 4px;
+    width: 12px;
+    height: 10px;
+    background-image: url(../imgs/ico-service-new.png);
+    background-size: 12px 30px;
+}
+
+.goods-specif.goods-tableware:before{
+    background-position: left -10px;
+}
+
+/*设置甜度*/
+.sweet-level{
+    display: inline-block;
+    font-size: 11px;
+    color: #444;
+}
+/*甜度图片*/
+.sweet-icon{
+    width: 68px;
+    height: 11px;
+    background-image: url(../imgs/ico-sweet-new.png);
+    background-repeat: no-repeat;
+    background-size: 65px 11px;
+    display: inline-block;
+    vertical-align: -2px;
+}
+.sweet-2{
+    background-position: -39px top
+}
+
+/*重量*/
+.goods-specif.goods-weight:before{
+    background-position: left -20px;
+}
+
+/* 设置提交订单上传语音 */
+.goods-audio > .row{
+    margin-left: 5px;
+}
+
+.audio-tips{
+    position: relative;
+    color: #444;
+    font-size: 12px;
+    line-height: 16px;
+    text-indent: 20px;
+}
+/*设置文字前面的小图标*/
+.audio-tips:before{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 12px;
+    background: url(../imgs/ico-audio-tips.png) no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 1px;
+}
+
+/*商品图片信息开始*/
+.page-section .goods-title{
+    margin: 30px 20px 10px;
+    padding: 10px;
+    border-top: 1px solid #d1c6af;
+}
+.page-section .goods-title h5{
+    font-size: 13px;
+    color: #a6906c;
+    text-align: center;
+}
+.page-section .goods-title h3{
+    font-size: 10px;
+    color: #a6906c;
+    text-align: center;
+}
+
+
+/* 第一张图片 */
+.image-full, .image-full img{
+    width:100%;
+}
+
+
+.page-section .goods-desc{
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 11px;
+}
+.page-section .goods-desc p{
+    font-size: 11px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+.page-section .goods-intro{
+    margin-top: 10px;
+}
+
+/* 关于食材的详细内容 */
+.page-section .goods-desc table.ingredients{
+    width:100%;
+}
+
+.page-section .goods-desc table.ingredients td{
+    padding:2px 5px 3px 0;
+}
+
+
+/* 设置底部加入购物车按钮 */
+/*.footer-nav{
+    position: fixed;
+    z-index: 100;
+    height: 48px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #d1c6af;
+}*/
+
+/* 设置购物车按钮 */
+.footer-nav .footer-widget{
+    position: relative;
+    padding-top: 27px;
+    float: left;
+    width: 50%;
+    line-height: 15px;
+    font-size: 11px;
+    color: #a38d6b;
+    text-align: center;
+    display: block;
+}
+
+/* 设置底部小图标*/
+.footer-nav .footer-widget:before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* 购物车小图标 */
+.footer-nav .footer-widget.cart:before{
+    background: url(../imgs/ico-nav-new.png) no-repeat -16px -48px;
+    background-size: 32px 80px;
+}
+
+/* 客服小图标 */
+.footer-nav .footer-widget.udesk:before{
+    background: url(../imgs/udesk.png) no-repeat left top;
+    background-size: 15px 14px;
+}
+
+/* 加入购物车按钮 */
+.footer-nav .button-label{
+    padding:0;
+}
+
+.footer-nav .btn-general-cart{
+    color: #fff;
+    background: #ff4001;
+}
+.footer-nav .btn{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 52px;
+    height: 52px;
+    outline: none;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+/* 加入商品以后购物车的样式 */
+#have-shop{
+    padding-bottom:100px;
+    /*display:none;*/
+}
+/* 加入商品列表 */
+.goods li{
+    background: #fff;
+    padding-left: 16px;
+    border-bottom: 1px solid #d1c6af;
+}
+
+/*促销信息*/
+.promotion{
+    margin: 0 0 0 -15px;
+    padding: 10px 15px 10px 48px;
+    position: relative;
+    color: #444;
+    background: #f9f9f9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 添加商品信息 */
+.goods-message{
+    padding: 10px 0;
+}
+.goods-message .img-wrap{
+    width: 120px;
+    height: 95px;
+    overflow: hidden;
+}
+
+/* 加入物品图片 */
+.goods-message img{
+    max-width: none;
+    max-height: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* 添加商品文字信息 */
+.goods-message .goods-info{
+    margin-left: 125px;
+    margin-top: 8px;
+    height: 95px;
+    position: relative;
+    padding-right: 16px;
+    padding-top: 0;
+}
+
+/*商品名称*/
+.goods-message h5{
+    font-size: 12px;
+    color: #444;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+/*英文名称*/
+.goods-message h3{
+    font-size: 10px;
+    color: #444;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+}
+
+/*餐具及价格*/
+.goods-message h4{
+    margin-top: 5px;
+    font-size: 12px;
+    color: #444;
+    height: 16px;
+    line-height: 16px;
+}
+
+.goods-message h4 span{
+    position: relative;
+    line-height: 16px;
+    height: 16px;
+    padding-left: 10px;
+    margin-right: 12px;
+    display: inline-block;
+}
+.goods-message h4 span:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 12px;
+    display: inline-block;
+}
+.goods-message h4 span.fork:before{
+    background: url(../imgs/icons_new.png) no-repeat -10px -78px;
+    background-size: 50px 100px;
+}
+.goods-message h4 span.candle:before{
+    background: url(../imgs/icons_new.png) no-repeat left -78px;
+    background-size: 50px 100px;
+}
+
+/* 商品价格 */
+.goods-message h6{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-size: 12px;
+    color: #444;
+    line-height: 20px;
+}
+.goods-message h6 strong{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* 删除及增删商品数量框 */
+.goods-message .input-wrap{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 25px;
+}
+.goods-message .input-wrap .down.rm{
+    left: 0;
+    background-position: left -50px;
+}
+
+.goods-message .input-wrap a{
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    height: 25px;
+    top: 0;
+    background: url(../imgs/icons_new.png) no-repeat;
+    -webkit-background-size: 50px 100px;
+    background-size: 50px 100px;
+}
+
+.goods-message .input-wrap input{
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    padding: 3px 65px 3px 50px;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: normal;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.goods-message .input-wrap .up{
+    right: 15px;
+    background-position: left top;
+}
+
+/* 添加生日牌生日祝福 */
+.more-info h1{
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #444;
+    margin:0;
+}
+.more-info h1 span.card-text{
+    color: #939393;
+}
+.more-info h1 span.val{
+    position: absolute;
+    left: 72px;
+}
+.more-info h1 span{
+    margin-right: 32px;
+    font-size: 13px;
+}
+
+/*精品配件*/
+.division h2{
+    font-size: 13px;
+    text-align: center
+}
+
+/*配件选择区*/
+.fitting{
+    padding: 16px 0;
+    background: #fff;
+}
+.fitting .img-wrap{
+    width: 90px;
+    height: 80px;
+    overflow: hidden;
+}
+.fitting img{
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.fitting h3{
+    width: 100px;
+    font-size: 12px;
+    color: #444;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.fitting h4{
+    font-size: 12px;
+    color: #444;
+    line-height: 20px;
+    text-align: center;
+}
+.fitting h4 b{
+    font-weight: normal;
+}
+
+
+/* 商品结算栏 */
+.amount{
+    position: fixed;
+    z-index: 100;
+    height: 50px;
+    left: 0;
+    bottom: 54px;
+    width: 100%;
+    background: white;
+    padding: 10px 16px;
+    border-top: 1px solid #d3c7b1;
+}
+.amount h3{
+    margin-top: 8px;
+    font-size: 11px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.amount h3 b{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/*结算按钮*/
+.amount a{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 40%;
+    background: #ff4001;
+    color: #fff;
+    font-size: 12px;
+}
+
+/*设置购物车数量标识*/
+.footer-nav.latest .nav-item .shopping-num{
+    margin-left: 4px;
+    height: 14px;
+    min-width: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    background-color: #ff4001;
+}
+.footer-nav .nav-item .shopping-num{
+    position: absolute;
+    left: 70%;
+    top: 2px;
+    text-align: center;
+    padding: 0 3px;
+    color: white;
+    background: #ff4001;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    /*display: none;*/
+}

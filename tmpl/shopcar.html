@@ -1,0 +1,428 @@
+<!-- 设置购物车页面 -->
+<!-- 外面大容器 -->
+<section class="main cart-container" ng-show="!cart.length">
+	<section class="goods">
+		<div class="no-content">
+			<img src="./static/imgs/empty.png" alt="">
+			<p>您还没有选购您的商品</p>
+		</div>
+	</section>
+
+
+	<!-- 为您推荐列表 -->
+	<section class="container recommend-goods">
+		<!-- 设置为您推荐 -->
+		<div class="division">
+			<h4>为您推荐</h4>
+			<h3>Sincerely Recommend</h3>
+		</div>
+	
+		<!-- 详细商品表 -->
+		<div class="row recommonds">
+			<div class="col-xs-6 recommend-item">
+				<a class="item-img" href="#">
+					<img src="./static/imgs/tj1.jpg" alt="">
+				</a>
+				<!-- 商品名称及操作区 -->
+				<div class="item-info">
+					<h1>钻石雪域牛乳芝士蛋糕</h1>
+					<h4>Diamond Cheesecake</h4>
+				</div>
+
+				<!-- 设置添加购物车的加号 -->
+				<a href="javascript:;" class="add-goods"></a>
+			</div>
+
+			<div class="col-xs-6 recommend-item">
+				<a class="item-img" href="#">
+					<img src="./static/imgs/tj2.jpg" alt="">
+				</a>
+				<!-- 商品名称及操作区 -->
+				<div class="item-info">
+					<h1>哈!蜜瓜蛋糕</h1>
+					<h4>Hey Melon</h4>
+				</div>
+
+				<!-- 设置添加购物车的加号 -->
+				<a href="javascript:;" class="add-goods"></a>
+			</div>
+			
+			<div class="col-xs-6 recommend-item">
+				<a class="item-img" href="#">
+					<img src="./static/imgs/tj3.jpg" alt="">
+				</a>
+				<!-- 商品名称及操作区 -->
+				<div class="item-info">
+					<h1>芒果熔岩星球蛋糕</h1>
+					<h4>Mango Planet</h4>
+				</div>
+
+				<!-- 设置添加购物车的加号 -->
+				<a href="javascript:;" class="add-goods"></a>
+			</div>
+
+			<div class="col-xs-6 recommend-item">
+				<a class="item-img" href="#">
+					<img src="./static/imgs/tj4.jpg" alt="">
+				</a>
+				<!-- 商品名称及操作区 -->
+				<div class="item-info">
+					<h1>莓果绵绵蛋糕</h1>
+					<h4>Strawberry Cream Cake</h4>
+				</div>
+
+				<!-- 设置添加购物车的加号 -->
+				<a href="javascript:;" class="add-goods"></a>
+			</div>
+
+			<div class="col-xs-6 recommend-item">
+				<a class="item-img" href="#">
+					<img src="./static/imgs/tj4.jpg" alt="">
+				</a>
+				<!-- 商品名称及操作区 -->
+				<div class="item-info">
+					<h1>环游世界·春夏季蛋糕</h1>
+					<h4>Around The World Cake</h4>
+				</div>
+
+				<!-- 设置添加购物车的加号 -->
+				<a href="javascript:;" class="add-goods"></a>
+			</div>
+		</div>	
+	</section>
+</section>
+
+
+
+
+<div haveshop></div>
+<!-- 加入商品以后购物车的样式 -->
+<section class="main cart-container" id="have-shop" ng-show="cart.length">
+	<!-- 加入商品列表 -->
+	<section class="goods">
+		<ul>
+			<li ng-repeat="item in cart">
+				<p class="promotion">
+					<span ng-hide="$index<={{item.index}}">{{item.cu}}</span>
+					{{item.promotion}}
+				</p>
+				<div class="goods-message clear-fix">
+					<!-- 添加商品图片信息 -->
+					<div class="img-wrap fl">
+						<img ng-src="{{item.img}}" alt="">
+					</div>
+
+
+					<!-- 添加商品文字信息 -->
+					<div class="goods-info">
+						<!-- 商品名称 -->
+						<h5>
+                            {{item.name}}
+                    	</h5>
+                    	<!-- 英文名称 -->
+                    	<h3>{{item.enname}}</h3>
+
+                    	<!-- 餐具 -->
+                    	<h4>
+                    		<span class="fork">x10</span>
+                    		<span class="candle">x1</span>
+                    	</h4>
+
+                    	<!-- 商品价格 -->
+                    	<h6>
+                    		&yen;
+                    		<strong>{{item.price}}</strong>
+                    	</h6>
+
+                    	<!-- 删除及增删商品数量框 -->
+                    	<div class="input-wrap">
+                    		<!-- 删除按钮 -->
+                    		<a ng-click="set(item.name,false)" href="javascript:;" class="down rm"></a>
+							<!-- 数量框 -->
+                    		<input type="text" ng-model="item.num">
+                    		<!-- 增加按钮 -->
+                    		<a ng-click="set(item.name,true)" href="javascript:;" class="up"></a>
+                    	</div>
+					</div>
+				</div>
+				
+				<!-- 添加生日牌生日祝福 -->
+				<div class="more-info">
+					<h1 class="clear-fix birthday-card-btn">		
+                		生日牌
+                		<span class="val card-text">填写生日祝福</span>
+					</h1>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 精品配件 -->
+	<div class="division">
+		<h2>精品配件</h2>
+		<h3>The Accessories</h3>
+	</div>
+
+	<!-- 配件选择区 -->
+	<section class="fitting">
+		
+		<div class="swiper-container" id="fitting">
+			<!-- 公共组件区 -->
+		    <div class="swiper-wrapper">
+		    	<!-- 一个slide 就是一屏-->
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj1.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>餐具(5套一组)</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>2.50</b>
+		        	</h4>
+		        </div>
+		        
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj2.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>金色蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>10.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj3.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>Happy Birthday蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>15.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj4.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>I LOVE MAMA</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>15.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj5.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>I love papa</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>15.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj6.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>蜡烛-心形</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj7.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字9蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj8.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字8蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj9.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字7蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj10.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字6蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj11.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字5蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj12.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字4蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj13.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字3蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj14.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字2蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+
+		        <div class="swiper-slide">
+		        	<!-- 商品图片 -->
+		        	<div class="img-wrap">
+		        		<img src="./static/imgs/pj15.jpg" alt="">
+		        	</div>
+					<!-- 商品名称 -->
+		        	<h3>数字1蜡烛</h3>
+					<!-- 商品价格 -->
+		        	<h4>
+		        		&yen;
+		        		<b>5.00</b>
+		        	</h4>
+		        </div>
+		    </div>
+		</div>
+
+	</section>
+
+	<!-- 商品结算栏 -->
+	<section class="amount clear-fix">
+		<div class="fl">
+			<h3>
+				总计：&yen;
+				<b>
+					<span id="total_price">{{sumPrice()}}</span>
+				</b>
+			</h3>
+		</div>
+
+		<a href="javascript:;" class="fr">结算</a>
+	</section>
+</section>
+
+<!-- 设置底部导航 -->
+<div class="footer-nav latest">
+	<nav class="footer-menu">
+		<a class="nav-item nav-index" href="#/">
+			<i></i>
+			首页
+		</a>
+		<a class="nav-item" href="#/list">
+			<i></i>
+			蛋糕馆
+		</a>
+		<a class="nav-item" href="#/gift">
+			<i></i>
+			礼品馆
+		</a>
+		<a id="only" class="nav-item nav-shopcar" href="#/shopcar">
+			<i></i>
+			购物车
+			<!-- 设置购物车数量标识 -->
+			<span class="shopping-num" ng-show="cart.length">{{allNum}}</span>
+		</a>
+		<a class="nav-item" href="#/user">
+			<i></i>
+			个人中心
+		</a>
+	</nav>
+</div>

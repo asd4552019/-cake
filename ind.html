@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="apple-mobile-web-app-status-bar-style" content="blank">
+	<meta content="telephone=no" name="format-detection">
+	<title>诺心LECAKE</title>
+	<link rel="icon" href="./static/imgs/icon.jpg">
+	<link rel="stylesheet" href="./static/css/swiper.min.css">
+	<link rel="stylesheet" href="./static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./static/css/reset.css">
+	<link rel="stylesheet" href="./static/css/normalize.css">
+	<link rel="stylesheet" href="./static/css/defaul.css">
+	<!-- <link rel="stylesheet" href="./static/css/gift.css"> -->
+	<link rel="stylesheet" href="./static/css/common.css">
+	<script src="./static/js/angular.min.js"></script>
+	<script src="./static/js/angular-route.js"></script>
+
+</head>
+<body ng-controller="cont" >
+	
+	<div ng-view></div>
+	
+	<script src="./static/js/faskclick.js"></script>
+	<script src="./static/js/swiper.min.js"></script>
+	<script src="./static/js/swiper.animate1.0.2.min.js"></script>
+	<script src="./static/js/jquery.min.js"></script>
+	<script src="./static/js/bootstrap.js"></script>
+	<script src="./static/js/resp.js"></script>
+	<script src="./static/js/angular.min.js"></script>
+	<script src="./static/js/jquery-1.11.1.min.js"></script>	
+	<script src="./static/js/fly.js"></script>
+	<script>  
+
+		// 设置路由
+		var app=angular.module("myapp",['ngRoute'],RouterConfig);
+ 
+		function RouterConfig($routeProvider){
+			$routeProvider
+				.when("/",
+					{templateUrl:"tmpl/index.html"
+				})
+				.when("/list",
+					{templateUrl:"tmpl/list.html"
+				})
+				.when("/gift",
+					{templateUrl:"tmpl/gift.html"
+				})
+				.when("/shopcar",
+					{templateUrl:"tmpl/shopcar.html"}
+				)
+				.when("/detil",
+					{templateUrl:"tmpl/detil.html"}
+				)
+				.otherwise({
+					templateUrl:"tmpl/user.html"
+			})
+		}
+
+		app.directive('direc',function(){
+			// 1.为什么返回?
+			return {
+				restrict:'AE', //四种都可以渲染
+				replace : true, 
+				compile:function(){
+					console.log("OK");
+					// 每渲染一次执行一次
+					var mySwiper = new Swiper ('.swiper-container', {
+					freeMode:true,//启动惯性
+					loop: true,
+					// 如果需要分页器
+					pagination: '.swiper-pagination',
+					autoplay: 3000,
+					speed:1000,
+					autoplayDisableOnInteraction:false, //用户滑动之后,继续轮播
+					}) 
+				}
+			};
+		});	
+
+
+		app.directive('haveshop',function(){
+			// 1.为什么返回?
+			return {
+				restrict:'AE', //四种都可以渲染
+				replace : true, 
+				compile:function(){
+					// console.log("OK");
+					// 每渲染一次执行一次
+					var mySwiper1 = new Swiper ('#fitting', {
+					  	freeMode:true,
+					  	slidesPerView : 3.5,
+  					}); 
+				}
+			};
+		});	
+
+
+		// var app = angular.module("myApp",[]);  
+		app.controller("cont",function($scope,$http){
+
+			// 网页首页数组
+			$scope.shou=[
+				{"name":"钻石雪域牛乳芝士蛋糕","img":"./static/imgs/tj1.jpg","goods-enname":"Diamond Cheesecake"},
+				{"name":"哈!蜜瓜蛋糕","img":"./static/imgs/tj2.jpg","goods-enname":"Hey Melon"},
+				{"name":"芒果熔岩星球蛋糕","img":"./static/imgs/tj3.jpg","goods-enname":"Mango Planet"},
+				{"name":"莓果绵绵蛋糕","img":"./static/imgs/tj4.jpg","goods-enname":"Strawberry Cream Cake"},
+				{"name":"环游世界·春夏季蛋糕","img":"./static/imgs/tj5.jpg","goods-enname":"Around The World Cake"},
+			];
+
+
+			$http({
+					method:"POST",
+					url:"./static/php/index.php",
+					headers:{
+						'Content-Type':'application/x-www-form-urlencoded'
+					}
+				
+				}).then(function(succ){
+					// console.log(succ.data);
+					$scope.data=succ.data;
+					angular.forEach($scope.data,function(item,index){
+            		// console.log(item);
+		            	item.num=0;
+		            	item.price=-(-(item.price));
+           		 })
+				},function(err){
+
+				})
+
+
+			$scope.set=function(name,bool){
+            	// console.log(name);
+
+            	angular.forEach($scope.data,function(item,index){
+            		
+            		if(name==item.name){
+            			if(bool){
+					
+					var flyer = $('<img class="u-flyer" src="'+item.img+'">');
+
+					//鼠标在页面点击开始位置计算.
+					var top = $(window).scrollTop();
+
+					var dh = event.pageY;
+
+					var newh = dh - top;
+
+
+					// 购物车按钮  end在那图片飘到哪
+					var oDiv = $('#only').offset();
+
+
+					var newdh = oDiv.top - top;
+
+					// 我可以设置初始,结束,图片宽度
+					flyer.fly({
+						start: {
+							left: event.pageX,
+							top: newh,
+							// width:50,
+							// height:50,
+							// 初始的图片样式我可以设置在class类里面
+						},
+						end: {
+							left: oDiv.left,
+							top: newdh,
+							width: 0,
+							height: 0
+						},
+						onEnd:function(){
+							console.log("OK");
+							this.destory();
+						}
+					})
+
+
+
+
+							if(item.num==0){
+								item.num=1;
+								 $scope.cart.push(item);
+								 
+							}else{
+								item.num++;
+							}
+            			}else{
+        					item.num--;
+        					item.num=item.num<=0?0:item.num;	
+            			}
+            		}
+
+            	})     
+            	console.log($scope.cart.length)	
+            }
+			$scope.cart=[];
+
+
+            $scope.sumPrice=function(){
+
+                var allPrice=0;  
+                angular.forEach($scope.cart,function(item,index){
+                   // 计算总价 
+                    allPrice+=item.num*item.price;
+                    // console.log(allPrice)
+                    if(item.num<=0){$scope.cart.splice(index,1)};
+                })
+                return allPrice;
+
+            }
+
+            $scope.$watch("data",function(){
+				$scope.allNum=0;
+				angular.forEach($scope.data,function(item,index){
+					//总价
+					$scope.allNum+=item.num;
+				})
+			},true);
+
+
+            $scope.boolBox = false;
+            $scope.search=function(boolBox){
+            	if($scope.boolBox){
+            		$scope.boolBox = false;
+            	}else{
+            		$scope.boolBox = true;
+            	}
+            }
+
+            // 设置价格升序函数
+            $scope.down = function(){
+				$scope.str2="-price";
+            }
+
+            $scope.up = function(){
+				$scope.str2="price";
+            }
+		})
+		
+
+
+	</script>
+	
+</body>
+</html>

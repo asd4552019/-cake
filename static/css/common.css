@@ -1,0 +1,68 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+
+    /*要求设置尺寸时，包含边框、内边距和内容区域，防止盒子在水平方向溢出到视口之外*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /*去掉某些元素的“触摸高亮颜色”，transparent表示完全透明*/
+	-webkit-tap-highlight-color: transparent;
+
+}
+
+body {
+	/*统一设置页面内的字号，字体名称*/
+	font: 14px "Microsoft YaHei",sans-serif;
+	/*文本颜色*/
+	color:#333;
+}
+
+a {
+	/*超链接的文本颜色不继承，所以需要单独设置*/
+	color:#333;
+	/*去掉下划线*/
+	text-decoration: none;
+}
+
+li {
+	/*去掉列表项默认的黑点*/
+	list-style: none;
+}
+
+input, textarea {
+	/*禁止用户改变元素尺寸*/
+	resize:none;
+	/*去掉默认的外轮廓*/
+	outline: none;
+	/*去掉默认的边框，需要时再人为添加，保持外观一致*/
+	border:none;
+
+	/*去掉某些浏览器下输入域的立体效果*/
+	-webkit-appearance: none;
+}
+
+/*设置图标背景图像，让所有class属性有icon-的元素使用同一张精灵图*/
+[class^="icon-"],[class*=" icon-"] {
+	background: url(../img/sprites.png) no-repeat;
+	-webkit-background-size: 200px 200px;
+	background-size: 200px 200px;
+}
+
+
+/*用于撑开高度塌陷的盒子*/
+.clearfix::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+
+/* 在实际工作中，经常用一个叫做reset.css或者normalize.css的文件来代替现在的这个css文件 */
